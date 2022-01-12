@@ -1,0 +1,137 @@
+
+@import url('../css/fonts.css');
+
+html, body{
+    margin: 0 0;
+    box-sizing: border-box;
+    overflow-x: hidden;
+    position: relative;
+}
+
+/* adding variables to root so we can reuse easily (for eg hex codes of colours or fonts with various styling*/
+
+:root{
+    --text-black: #181313;
+    --midnight: #104f55;
+    --tcv-green: #24ab6b; 
+
+    /* gradient colours, refer to webgradients.com and copy css code*/
+    --green-gradient: background-image: linear-gradient(120deg, #84fab0 0%, #8fd3f4 100%);
+
+}
+
+/* ------- Global Classes ------------*/
+
+
+a{
+    text-decoration: none;/* remove underline from text, globally so we don't have to repeat this property in future*/
+    color: var(--text-black);
+}
+
+.flex-row{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap; /* when you squeeze in the webpage horizontally, this helps the text to collapse to the next line (helps with mobile view)*/
+}
+
+ul{
+    list-style-type: none;
+}
+
+/* ----x--- Global Classes -----x------*/
+
+
+/*-------------- styling the navbar ------------------*/
+
+.nav{
+    background: #ebebe8;
+    padding: 0 0 /*this represents zero padding for top and bottom and 2 for left and right*/;
+    height: 0rem;
+    min-height: 8vh;
+    overflow: hidden;
+}
+
+.nav .nav-menu{
+    justify-content: space-between;
+}
+
+.nav .toggle-collapse{
+    position: absolute;
+    top: 0%;
+    width: 95%;
+    cursor: pointer;
+    display: none;
+}
+
+.nav .toggle-collapse .toggle-icons{
+    display: flex;
+    justify-content: flex-end;
+    padding: 1.4rem 0;
+}
+
+.nav .toggle-collapse .toggle-icons i{
+    font-size: 2rem;
+    color: white;
+}
+
+.nav .nav-items{ /* to align all the navbar items in the same line instead of being in a vertical-styled list*/
+    display: flex;
+    margin: 0;
+}
+
+.nav .nav-items .nav-link{
+    padding: 1.4rem 1rem;
+    font-size: 2rem;
+    position: relative;
+    font-family: Lato;
+}
+
+.nav .nav-items .nav-link:hover{
+    background-color: var(--tcv-green);
+}
+
+.nav .nav-items .nav-link:hover a{
+    color: white;
+}
+
+.nav .social{
+    padding: 1.4rem 0;
+}
+
+.nav .social i{
+    padding: 0 0.2rem;
+}
+
+.nav .social i:hover{
+    color: #a1c4cf;
+}
+
+.nav .nav-brand a{
+    font-size: 2rem;
+    padding: 1.3rem 2rem;
+    display: block;
+    font-family: Lato;
+    color: white;
+    background-color: var(--tcv-green);
+}
+
+/*------x------- styling the navbar --------x---------*/
+
+
+/* Viewport less than or equal to 750px */
+
+@media only screen and (max-width: 950px){
+    .nav .nav-menu, .nav .nav-items{
+        flex-direction: column;
+        
+    }
+
+    .nav .toggle-collapse{
+        display: initial;
+    }
+}
+
+
+
+
+/*  x    Viewport less than or equal to 750px    x     */

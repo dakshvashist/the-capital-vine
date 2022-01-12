@@ -1,0 +1,28 @@
+
+/* font-family: Lato */
+@font-face {
+    font-family: Lato;
+    src: url('../fonts/Lato-Regular.ttf');
+}
+
+/* font-family: Roboto_Mono */
+
+@font-face {
+    font-family: Roboto;
+    src: url('../Roboto_Mono/static/RobotoMono-Regular.ttf');
+}
+
+
+/* font-family: Merriweather */
+
+@font-face {
+    font-family: Merriweather;
+    src: url('../Merriweather/Merriweather-Regular.ttf');
+}
+
+/* font-family: Josefin_Sans */
+
+@font-face {
+    font-family: Josefin;
+    src: url('../Josefin_Sans/static/JosefinSans-Regular.ttf');
+}
